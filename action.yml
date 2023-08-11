@@ -1,0 +1,13 @@
+name: 'Hello World'
+description: 'Greet someone and record the time'
+inputs:
+  project:
+    description: 'project name'
+    required: true
+  verbose:
+    description: 'verbose'
+    required: false
+    default: false
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
