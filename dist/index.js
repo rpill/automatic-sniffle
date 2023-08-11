@@ -9756,7 +9756,7 @@ try {
 
   // If the event that triggered your workflow run was a pull request,
   // you can get the username of the person who opened it with:
-  const usernamePR = context.payload.pull_request.user.login;
+  // const usernamePR = context.payload.pull_request.user.login;
 
   // If the event that triggered your workflow run was a push event,
   // you can get the username of the person who did the push with:
