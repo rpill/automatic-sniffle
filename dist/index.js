@@ -9762,7 +9762,6 @@ try {
   // you can get the username of the person who did the push with:
   const usernamePush = context.payload.pusher.name;
 
-  console.log(usernamePR);  // Show username for PR event
   console.log(usernamePush); // Show username for push event
 } catch (error) {
   _actions_core__WEBPACK_IMPORTED_MODULE_0__.setFailed(error.message);
