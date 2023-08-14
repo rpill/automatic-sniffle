@@ -3,16 +3,9 @@ import github from '@actions/github';
 
 try {
   const context = github.context;
+  const username = context.payload.pusher.name ? context.payload.pusher.name : context.payload.pull_request.user.login;
 
-  // If the event that triggered your workflow run was a pull request,
-  // you can get the username of the person who opened it with:
-  // const usernamePR = context.payload.pull_request.user.login;
-
-  // If the event that triggered your workflow run was a push event,
-  // you can get the username of the person who did the push with:
-  const usernamePush = context.payload.pusher.name;
-
-  console.log(usernamePush); // Show username for push event
+  console.log(username);
 } catch (error) {
   core.setFailed(error.message);
 }
